@@ -1,0 +1,37 @@
+1.Create project directory structure.
+
+2.Create package.json.
+
+3.npm install(环境配置)
+--save(自动把模块和版本号添加到dependencies部分)
+--save-dev(自动把模块和版本号添加到devdependencies部分)
+-g(全局安装)
+
+
+4.配置多个组件用逗号隔开Install Browserify, React, and tools
+# These dependencies are required for running the app.
+npm install --save react jquery lodash moment
+
+# These dependencies are required for building the app.
+npm install --save-dev browserify watchify reactify
+
+# These dependencies are globally installed command line tools.
+npm install -g browserify watchify http-server
+
+5.植入程序代码
+
+6.打包编译watchify(实时编译)和browserify(执行一次编译)
+$watchify -v -o build/js/app.js js/app.js
+or
+$watchify x.js -o x.out.js
+or
+$browserify x.js -o x.out.js
+
+7.启动服务，在浏览器中查看
+$http-server -p 8888
+
+解决问题，出现了render is not a function，是因为最新版本的react已经做了一个分离，需要配置react-dom
+npm install --save react-dom
+
+
+
