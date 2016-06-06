@@ -40,7 +40,7 @@ Setup
  1. Install Browserify, React, and tools.
     ```bash
     # These dependencies are required for running the app.
-    npm install --save react jquery lodash moment
+    npm install --save react react-dom jquery lodash moment
 
     # These dependencies are required for building the app.
     npm install --save-dev browserify watchify reactify
@@ -94,6 +94,7 @@ NewsItem Title
     var $ = require('jquery');
     var NewsItem = require('./NewsItem');
     var React = require('react');
+    var React = require('react-dom');
 
     $.ajax({
       url: '/json/items.json'
@@ -107,7 +108,7 @@ NewsItem Title
 
     > Note: This lets us develop the NewsItem component in isolation, rather than requiring it to be hooked into the full app.
 
- 1. Create a new CSS file: /css/NewsItem.css. We are following [Jacob Thornton's CSS style guide](https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06).
+ 1. Create a new CSS file: /css/NewsItem.css.
     ```css
     .newsItem {
       color: #828282;
@@ -156,6 +157,8 @@ NewsItem Title
     ```
 
  1. Visit [http://localhost:8888/html/NewsItem.html](http://localhost:8888/html/NewsItem.html). You should see the following.
+
+    <img src="img/DeveloperConsole.png" width="274">
 
 
 [Previous](#newsitem) &middot; [Next](#newsitem-domain)
@@ -323,23 +326,7 @@ NewsItem Rank and Vote
     ```css
     .newsItem {
       /* ... */
-      align-items: baseline;
       display: flex;  
-    }
-
-    .newsItem-itemText {
-      flex-grow: 1;
-    }
-
-    .newsItem-rank {
-      flex-basis: 25px;
-      font-size: 10pt;
-      text-align: right;
-    }
-
-    .newsItem-vote {
-      flex-basis: 15px;
-      text-align: center;
     }
     ```
 
@@ -347,9 +334,6 @@ NewsItem Rank and Vote
 
     <img src="img/NewsItemRankVote.png" width="297">
 
-    You have now implemented an HN news item in React.
-
-    <img src="img/NewsItem@2x.png" width="532">
 
 [Previous](#newsitem-subtext)
 
