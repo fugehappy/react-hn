@@ -4,17 +4,10 @@ This is a visual React tutorial. This tutorial should give you a feel for "growi
 
 > Note: This tutorial covers React, Browserify, and CSS. It does not cover event handling (not needed for the HN front page), state (not needed for the HN front page), or Flux.
 
-This tutorial has five parts:
+This tutorial has one part:
 
  1. [Setup](#setup)
 
- 1. [NewsItem component](#newsitem)
-
- 1. [NewsHeader component](#newsheader)
-
- 1. [NewsList component](#newslist)
-
- 1. [Display live data from the Hacker News API](#hacker-news-api)
 
 ---
 
@@ -164,9 +157,6 @@ NewsItem Title
 
  1. Visit [http://localhost:8888/html/NewsItem.html](http://localhost:8888/html/NewsItem.html). You should see the following.
 
-    <img src="img/NewsItemTitle.png" width="110">
-
-    <img src="img/DeveloperConsole.png" width="274">
 
 [Previous](#newsitem) &middot; [Next](#newsitem-domain)
 
@@ -210,7 +200,6 @@ NewsItem Domain
 
  1. Refresh the browser. You should see the following.
 
-    <img src="img/NewsItemDomain.png" width="213">
 
 [Previous](#newsitem-title) &middot; [Next](#newsitem-subtext)
 
@@ -250,8 +239,11 @@ NewsItem Subtext
       getTitle: function () {
         return (
           <div className="newsItem-title">
-            ...
-          </div>
+			<a className="newsItem-titleLink" href={this.props.item.url}>{this.props.item.title}</a>
+			<span className="newsItem-domain">
+			  ({this.getDomain()})
+			</span>
+		  </div>
         );
       },
 
@@ -283,7 +275,6 @@ NewsItem Subtext
 
  1. Refresh the browser. You should see the following.
 
-    <img src="img/NewsItemSubtext.png" width="268">
 
 [Previous](#newsitem-domain) &middot; [Next](#newsitem-rank-and-vote)
 
