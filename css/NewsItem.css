@@ -1,8 +1,21 @@
 .newsItem {
   color: #828282;
   margin-top: 5px;
+  display:-webkit-flex;
+  display:flex;
 }
-
+.newsItem-vote{
+  width:48px;
+  margin-right:10px;
+}
+.newsItem-rank{
+  width:28px;
+  text-align:right;
+  margin-right:10px;
+}
+.newsItem-itemText{
+  flex:1;
+}
 .newsItem-titleLink {
   color: black;
   font-size: 10pt;

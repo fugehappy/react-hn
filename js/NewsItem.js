@@ -51,7 +51,7 @@ var NewsItem = React.createClass({
   getVote: function () {
     return (
       <div className="newsItem-vote">
-        <a href={'https://news.ycombinator.com/vote?for=' + this.props.item.id + '&dir=up&whence=news'}>pic</a>
+        <a href={'https://news.ycombinator.com/vote?for=' + this.props.item.id + '&dir=up&whence=news'}><img src="../img/logo.jpg"/></a>
       </div>
     );
   },

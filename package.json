@@ -12,9 +12,9 @@
   "dependencies": {
     "jquery": "^2.2.4",
     "lodash": "^4.13.1",
-    "moment": "^2.13.0",
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "moment": "^2.14.1",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
   },
   "devDependencies": {
     "browserify": "^13.0.1",

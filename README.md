@@ -15,7 +15,16 @@ Setup
 ---
  1. Create the project directory structure.
     ```bash
-    mkdir -p hn/{build/js,css,html,img,js,json}
+    mkdir -p react-hn/{build/js,css,html,img,js,json}
+	.react-hn
+	├── build/
+	│   └──js
+	├── css
+	├── html
+	├── img
+	├── js
+	├── json
+	└── package.json
     cd hn
     ```
 
